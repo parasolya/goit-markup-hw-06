@@ -766,7 +766,7 @@ p {
 
   border-color: transparent;
 
-  caret-color: var(--accent-color);
+  /* caret-color: var(--accent-color); */
 }
 
 .modal-form-wrapper {
@@ -910,10 +910,8 @@ p {
   top: 11px;
   left: 12px;
   fill: var(--portfolio-title-color);
-
-  transition: fill var(--anim-fast);
 }
 .modal-form-wrapper:hover .modal-form-icon,
-.modal-form-wrapper:focus .modal-form-icon{
+.modal-form-wrapper:focus .modal-form-icon {
   fill: var(--accent-color);
 }
