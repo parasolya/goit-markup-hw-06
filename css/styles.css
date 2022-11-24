@@ -93,7 +93,7 @@ address {
   line-height: 1.2;
   letter-spacing: 0.03em;
 }
-.logo-black {
+.logo--black {
   color: var(--black-color);
 }
 .logo-white {
@@ -110,15 +110,27 @@ address {
 
   transition: color var(--anim-fast);
 }
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--accent-color);
+/* Навігація */
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
-.nav-item {
+.nav__item {
   position: relative;
   display: flex;
 }
-.nav-link::after {
+.nav__link {
+  display: block;
+  padding: 32px 0px;
+}
+.nav__link:hover,
+.nav__link:focus {
+  color: var(--accent-color);
+}
+
+.nav__link::after {
   position: absolute;
   display: flex;
   content: '';
@@ -129,34 +141,26 @@ address {
   bottom: 0px;
   transition: background-color var(--anim-fast);
 }
-
-.nav-link.current::after {
+.nav__link:hover::after {
   background-color: var(--accent-color);
 }
-.nav-link:hover::after {
-  background-color: var(--accent-color);
-}
-
-.site-nav .link.current {
+.nav__link--current {
   color: var(--accent-color);
 }
+.nav__link--current::after {
+  background-color: var(--accent-color);
+}
 
-.site-nav {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
-.nav-item .link {
-  display: block;
-  padding: 32px 0px;
-}
+
+
+
 /* Шапка flex */
 .header-box {
   display: flex;
   align-items: center;
   min-height: 80px;
 }
-.header-box-item:nth-child(1) {
+.header-box__item:nth-child(1) {
   margin-right: 93px;
 }
 .link.contact {
@@ -174,7 +178,7 @@ address {
 .contact-icon {
   fill: currentColor;
 }
-.nav-contact.header-box-item {
+.nav-contact.header-box__item {
   display: flex;
   align-items: center;
   gap: 50px;
@@ -272,7 +276,7 @@ p {
 }
 .work .title,
 .team .title,
-.customers .title {
+.customers__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -340,30 +344,33 @@ p {
 .social-link .social-icon {
   fill: currentColor;
 }
-.customers-box {
+
+/* Постійні клієнти */
+.customers__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  gap: 30px;  
 }
-.customers-link {
-  color: var(--social-color);
-  border: 1px solid currentColor;
-  border-radius: 4px;
+.customers__link {  
   display: flex;
   justify-content: center;
   align-items: center;
   width: 170px;
   height: 92px;
 
+  color: var(--social-color);
+  border: 1px solid currentColor;
+  border-radius: 4px;
+
   transition: color var(--anim-fast);
 }
-.customers-link:hover,
-.customers-link:focus {
+.customers__link:hover,
+.customers__link:focus {
   color: var(--accent-color);
 }
-.customers-icon {
+.customers__icon {
   fill: currentColor;
 }
 
